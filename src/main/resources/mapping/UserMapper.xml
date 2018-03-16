@@ -16,4 +16,10 @@
     from user_t
     where id = #{id,jdbcType=INTEGER}
   </select>
+
+  <select id="selectUserByListPage" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user_t
+  </select>
 </mapper>

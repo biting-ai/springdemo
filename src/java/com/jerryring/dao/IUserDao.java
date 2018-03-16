@@ -1,5 +1,6 @@
 package com.jerryring.dao;
 
+import com.jerryring.model.Page;
 import com.jerryring.model.User;
 
 import java.util.List;
@@ -10,6 +11,14 @@ import java.util.List;
 public interface IUserDao {
 
     User selectByPrimaryKey(Integer id);
+
+    /**
+     * 通过用户列表信息
+     *
+     * @param page 分页信息
+     * @return 用户列表list对象
+     */
+    List<User> selectUserByListPage(Page page);
 
 //    void deleteByPrimaryKey(Integer id);
 //

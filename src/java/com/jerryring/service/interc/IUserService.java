@@ -1,6 +1,9 @@
 package com.jerryring.service.interc;
 
+import com.jerryring.model.Page;
 import com.jerryring.model.User;
+
+import java.util.List;
 
 /**
  * @author chenjia
@@ -8,4 +11,6 @@ import com.jerryring.model.User;
  */
 public interface IUserService {
     User getUserById(int userId);
+
+    List<User> selectUserByListPage(Page page);
 }
